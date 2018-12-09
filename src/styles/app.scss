@@ -1,0 +1,28 @@
+@import 'mixins';
+@import 'config';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html.app {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    body {
+        min-height: 100%;
+        margin: 0;
+        width: 100%;
+    }
+    .loaded {
+        .loader {
+            display: none;
+        }
+    }
+}
+
+@import 'header';
+@import 'utils';
+@import 'section-1';
+@import 'section-2';
+@import 'section-3';
+@import 'section-5';
+@import 'section-6';
+@import 'footer';

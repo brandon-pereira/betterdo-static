@@ -1,0 +1,27 @@
+.section3 {
+    padding: 20px;
+    background: $accent3;
+    border-bottom: 3px solid $accent3;
+    margin-bottom: 1rem;
+    .column {
+        background: #fff;
+        box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    @include medium() {
+        background: #fff;
+        padding: 0 5rem;
+        .column {
+            margin: 0;
+            padding: 20px 20px 20px 0;
+            box-shadow: none;
+            &:not(:first-of-type) {
+                padding-left: 20px;
+                padding-right: 0;
+                border-left: 3px solid $accent3;
+            }
+        }
+    }
+}

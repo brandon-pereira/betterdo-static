@@ -1,0 +1,9 @@
+.section2 {
+    padding-top: 3rem;
+    padding-bottom: 0;
+    background: $accent3;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    svg {
+        margin-bottom: 2rem;
+    }
+}
