@@ -4,10 +4,10 @@ const OfflinePlugin = require('offline-plugin');
 
 const getPlugins = () => {
     const plugins = [
-        new webpack.optimize.MinChunkSizePlugin({
-            minChunkSize: 10000
+        new webpack.optimize.LimitChunkCountPlugin({
+            minChunkSize: 10000,
+            maxChunks: 1
         }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.DefinePlugin({
             // scope hoisting
             PRODUCTION: JSON.stringify(process.env.NODE_ENV === 'production')
@@ -62,7 +62,21 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('postcss-preset-env')(),
+                                require('cssnano')()
+                            ]
+                        }
+                    },
+                    'sass-loader'
+                ]
             }
         ]
     },
