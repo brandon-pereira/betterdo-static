@@ -15,7 +15,8 @@
         "scroll-text": "^1.0.1"
     },
     "devDependencies": {
-        "astro": "^0.22.5"
+        "astro": "^0.22.5",
+        "prettier-plugin-astro": "^0.0.11"
     },
     "author": "Brandon Pereira",
     "license": "ISC"
