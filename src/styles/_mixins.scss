@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /**
  * Flash mixins to be used in your project.
  */
@@ -49,9 +51,12 @@
  * @include responsive-font(5vw, 35px, 150px, 50px);
  */
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-    $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+    $responsive-unitless: math.div(
+        $responsive,
+        ($responsive - $responsive + 1)
+    );
     $dimension: if(unit($responsive) == 'vh', 'height', 'width');
-    $min-breakpoint: $min / $responsive-unitless * 100;
+    $min-breakpoint: calc($min / $responsive-unitless * 100);
 
     @media (max-#{$dimension}: #{$min-breakpoint}) {
         font-size: $min;

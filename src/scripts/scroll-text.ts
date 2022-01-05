@@ -105,7 +105,7 @@ class ScrollText {
      * @param {Object} opts options to pass
      * @param {Function} Callback on complete (called immediately if not supported)
      */
-    _animate(el, transition, opts, cb = () => {}) {
+    _animate(el, transition, opts, cb) {
         if (el && 'animate' in el) {
             el.animate(transition, opts).onfinish = cb;
         } else if (cb) {
