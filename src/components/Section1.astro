@@ -1,3 +1,8 @@
+
+---
+import Automation from '../svgs/automation.svg';
+---
+	
 <article class="section1">
     <div class="row">
         <div class="column">
@@ -6,7 +11,28 @@
             <p>BetterDo provides you with an intelligent system for sorting your tasks. It can also prioritize tasks and provide you an agenda for when things should be completed.</p>
         </div>
         <div class="column">
-            {% include "../../svgs/automation.svg" %}
+            <img src={Automation} />
         </div>
     </div>
 </article>
+
+<script>
+    Array.from(document.querySelectorAll('[data-scroll-text]')).map(
+        el => new ScrollText(el)
+    );
+</script>
+
+
+<style lang="scss" >
+	@import '../styles/_config.scss';
+	@import '../styles/_mixins.scss';
+
+    .section1 {
+        @include medium() {
+            p,
+            h2 {
+                text-align: right;
+            }
+        }
+    }
+</style>
