@@ -9,10 +9,7 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "test": "eslint ."
-    },
-    "dependencies": {
-        "scroll-text": "^1.0.1"
+        "test": "eslint . && tsc --noemit"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.9.0",

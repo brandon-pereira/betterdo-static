@@ -2,10 +2,7 @@
 import BetterDo from '../svgs/betterdo.svg';
 ---
 
-<script type="module">
-    import ScrollText from '../scripts/scroll-text';
-    new ScrollText(document.querySelector('[data-scroll-text]'));
-</script>
+<script hoist type="module" src={Astro.resolve('../scripts/app')}></script>
 
 <header>
     <div class="foreground">
