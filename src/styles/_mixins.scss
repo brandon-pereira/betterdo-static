@@ -58,7 +58,7 @@
     }
 
     @if $max {
-        $max-breakpoint: $max / $responsive-unitless * 100;
+        $max-breakpoint: calc($max / $responsive-unitless * 100);
 
         @media (min-#{$dimension}: #{$max-breakpoint}) {
             font-size: $max;
