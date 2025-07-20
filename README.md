@@ -1,3 +1,7 @@
+# ⚠️ Deprecated
+
+This repository is no longer maintained. We have migrated to a monorepo containing all BetterDo projects. Please refer to the new repository at [betterdo](https://github.com/brandon-pereira/betterdo).
+
 # betterdo-static
 
 This repository contains the static site which is visible pre-authentication as well as any static files hosted on the server.
